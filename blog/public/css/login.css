@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+.header {
+	background:url('/blog/public/img/z_index_top_bg.jpg') repeat-x;
+	position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:40px;
+    overflow:hidden;
+    
+}
+div.center {
+	position:absolute;
+    right:20%;
+    left:20%;
+    top:0;
+    bottom:0;
+}
+ul {
+
+}
+.footer {
+ background-color:lightblue;
+ position:absolute;
+ bottom:0;
+ right:0;
+ left:0;
+ height:30px;
+}
+.main {
+
+    position:absolute;
+    top:40px;
+    left:20%;
+    right:20%;
+    bottom:30px;
+    
+
+}
+
+div.left {
+    background-color:lightblue;
+    padding-top:5%;
+    position:absolute;
+    height:100%;
+    overflow:hidden;
+    width:280px;
+    left:0px;
+    top:0px;
+    bottom:0px;
+}
+div.right {
+	
+	background-color:rgb(255,255,255);
+	position:absolute;
+    height:100%;
+    left:280px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    overflow:hidden;
+}
+
+.glyphicon {
+	
+	
+}
+.glyphicon-chevron-right {
+	
+}
+.glyphicon-chevron-left {
+	
+}
+body {
+	overflow:scroll;
+}
+form {
+
+ 
+	
+}

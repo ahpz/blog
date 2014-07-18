@@ -1,0 +1,16 @@
+
+[Wed, 16 Jul 14 12:15:34 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:15:41 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:15:49 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:17:13 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:52:07 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:52:11 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:52:34 +0000][DEBUG] register success:
+[Wed, 16 Jul 14 12:53:47 +0000][ERROR] request is not post
+[Wed, 16 Jul 14 12:53:52 +0000][DEBUG] register success1@2:d
+[Wed, 16 Jul 14 12:54:42 +0000][DEBUG] register success1@2:d
+[Wed, 16 Jul 14 12:57:47 +0000][DEBUG] register success1@2:d
+[Wed, 16 Jul 14 13:04:16 +0000][DEBUG] register success1@2:d
+[Wed, 16 Jul 14 13:04:22 +0000][DEBUG] register success1@2:1
+[Wed, 16 Jul 14 13:04:44 +0000][DEBUG] register success1@2:1
+[Wed, 16 Jul 14 13:05:16 +0000][DEBUG] register success1@2:1
