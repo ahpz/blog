@@ -18,42 +18,30 @@ class RegisterController extends \Phalcon\Mvc\Controller
 // 	}
 	public function testAction($params)
 	{
-		print_r($params);
-		echo "\n";
-		echo "</br>";
-		$params = $this->router->getParams();
-		print_r($params);
-// 		echo $this->router->getControllerName();
-// 		echo $this->router->getActionName();
-// 		print_r($this->router->getParams()); // mdoule/controller/action/parma1/parma2……
-
-		//print_r($this->menu);
- 		
-//  		$log->test();
- 		
-//  		echo "\n";
-//  		\blog\pengzhi\models\Log::test(); //静态 动态调用都可以的
- 		
-// 		echo $log->getSchema()." : ".$log->getSource()."\n";
 		
+		//try {
+		$transactionManager = new \Phalcon\Mvc\Model\Transaction\Manager();
 		
+		$transaction = $transactionManager->get();
 		
-// 		$transactionManager = new \Phalcon\Mvc\Model\Transaction\Manager();
+		$log = new \blog\pengzhi\models\Log();
+		//$log = \blog\pengzhi\models\Log::findFirst("subject='subject1'");
+		$log->subject="subject1";
+		$log->content="content2";
 		
-// 		$transaction = $transactionManager->get();
-// 		$log = new \blog\pengzhi\models\Log();
-// 		$log->subject="subject1";
-// 		$log->content="content";
-		
-// 		$log->setTransaction($transaction);
+		$log->setTransaction($transaction);
 		
 
-// 		if($log->save()==false){
-// 			$transaction->rollback("Can't save log");
-// 		} else {
-// 			$transaction->rollback("Can save log");
+		if($log->save()==false){
+			///$transaction->rollback("Can't save log");
+		} else {
+			//$transaction->rollback("Can save log");
+		}
+		$transaction->commit();
 // 		}
-// 		$transaction->commit();
+// 		catch(Phalcon\Mvc\Model\Transaction\Failed $e){
+// 			echo 'Failed, reason: ', $e->getMessage();
+// 		}
 		
 	}
 	public function indexAction()

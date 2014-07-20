@@ -10,16 +10,12 @@ class Log extends \Phalcon\Mvc\Model
 {
 	public $subject;
 	public $content;
-	
-	public  function  __construct()
-	{
-		
-	}
-  
+
 	public function initialize() //新建 对象时 自动调用的方法 
 	{
-		$this->setConnectionService("db");  //默认是di中的db服务
 		echo "initialize";
+		$this->setConnectionService("db");  //默认是di中的db服务
+	
 		
 	}
 	public function getSource()  //可以修改对应的表名 
