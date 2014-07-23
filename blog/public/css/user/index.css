@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+.header {
+	background:url('/blog/blog/public/img/z_index_top_bg.jpg') repeat-x;
+	position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:40px;
+    overflow:hidden;
+    
+}
+.footer {
+ background-color:lightblue;
+ position:absolute;
+ bottom:0;
+ right:0;
+ left:0;
+ height:30px;
+}
+.main {
+
+    position:absolute;
+    top:40px;
+    left:20%;
+    right:20%;
+    bottom:30px;
+    
+
+}

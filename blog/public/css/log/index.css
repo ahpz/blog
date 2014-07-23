@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+.header {
+	background:url('/blog/blog/public/img/z_index_top_bg.jpg') repeat-x;
+	position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:40px;
+    overflow:hidden;
+    
+}
+.footer {
+ background-color:lightblue;
+ position:absolute;
+ bottom:0;
+ right:0;
+ left:0;
+ height:30px;
+}
+.main {
+
+    position:absolute;
+    top:40px;
+    left:20%;
+    right:20%;
+    bottom:30px;
+    
+
+}
+div.subject {
+	position:absolute;
+	top:5px;
+	left:0px;
+	right:0px;
+	height:30px;
+}
+div.content {
+	position:absolute;
+	bottom:50px;
+	left:0px;
+	right:0px;
+	top:40px;
+}
+input.content {
+	display:block;
+	width:100%;
+	height:100%;
+}
+div.submit {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	height:50px;
+}
