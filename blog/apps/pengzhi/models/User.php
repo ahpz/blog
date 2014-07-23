@@ -21,4 +21,10 @@ class User extends \Phalcon\Mvc\Model
 	{
 		return "blog"; //映射的数据库名
 	}
+	public function objectToArray()
+	{
+		return array("username" => $this->username,
+				"password" => $this->password
+		);
+	}
 }

@@ -11,10 +11,6 @@ class Log extends \Phalcon\Mvc\Model
 	public $subject;
 	public $content;
 	
-	public  function  __construct()
-	{
-		
-	}
   
 	public function initialize() //新建 对象时 自动调用的方法 
 	{

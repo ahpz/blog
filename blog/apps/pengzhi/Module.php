@@ -12,7 +12,8 @@ class Module //implements \Phalcon\Mvc\ModuleDefinitionInterface
 		
 		$loader->registerNamespaces(array(
 				'blog\pengzhi\controllers' => '../apps/pengzhi/controllers/',
-				'blog\pengzhi\models' => '../apps/pengzhi/models/'
+				'blog\pengzhi\models' => '../apps/pengzhi/models/',
+				'blog\librarys' => "../apps/librarys/"
 				))->register();
 		
 	}
@@ -50,6 +51,12 @@ class Module //implements \Phalcon\Mvc\ModuleDefinitionInterface
 					"username" => $config->database->user,
 					"dbname" => $config->database->dbname));
 			return $db;
+		});
+		$di->setShared("session", function(){
+			$session = new \Phalcon\Session\Adapter\Files(array('uniqueId'=>"pengzhi_blog"));
+			$session->start();
+			return $session;
+			
 		});
 	}
 }

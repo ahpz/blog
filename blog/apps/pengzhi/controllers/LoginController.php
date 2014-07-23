@@ -12,6 +12,7 @@ class LoginController extends \Phalcon\Mvc\Controller
 			$user =\blog\pengzhi\models\User::findFirst("username='".$username."'");
 			if (strcmp($user->password, $password) === 0) {
 				//$this->flash->success("login succss");
+				$this->session-set("username",$username);
 				return $this->dispatcher->forward(array("controller" => "main", "action" => "index")); //不需要return 也可以 (成功跳转到main/index)
 			} else {
 				//$this->flash->success("login fail");
