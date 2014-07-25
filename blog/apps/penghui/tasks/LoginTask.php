@@ -11,5 +11,7 @@ class LoginTask extends \Phalcon\CLI\Task
 	public function indexAction()
 	{
 		echo "indexAction";
+		echo __DIR__;
+		echo json_encode($this->getDI()->get("config")->database);
 	}
 }
