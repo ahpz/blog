@@ -12,4 +12,8 @@ class LoginTask extends \Phalcon\CLI\Task
 	{
 		echo "indexAction";
 	}
+	public function queryByName($name)
+	{
+		
+	}
 }

@@ -12,8 +12,8 @@ class Task
 	{
 	   $loader = new \Phalcon\Loader();
 	   $loader->registerNamespaces(array(
-	   				'blog\penghui\models' => "../apps/penghui/models",
-	   		        'blog\penghui\tasks' => "../apps/penghui/tasks"  				
+	   				'blog\penghui\models' => "./models",
+	   		        'blog\penghui\tasks' => "./tasks"  				
 	   ))->register();
 	}
 	
@@ -25,7 +25,7 @@ class Task
 		});
 		$di->setShared("dispatcher", function(){
 			$dispatcher = new \Phalcon\CLI\Dispatcher();
-			$dispatcher->setDefaultNamespaces("blog\penghui\tasks\\");
+			$dispatcher->setDefaultNamespaces("blog\penghui\\tasks\\");
 			return $dispatcher;
 		});
 		
