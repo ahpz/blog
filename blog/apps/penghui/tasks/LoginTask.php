@@ -14,4 +14,8 @@ class LoginTask extends \Phalcon\CLI\Task
 		echo __DIR__;
 		echo json_encode($this->getDI()->get("config")->database);
 	}
+	public function queryByName($name)
+	{
+		
+	}
 }
