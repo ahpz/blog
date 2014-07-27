@@ -7,31 +7,45 @@
 <link rel="stylesheet" type="text/css" href="/blog/blog/public/css/bootstrap.css">
 <script type="text/javascript" src="/blog/blog/public/js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="/blog/blog/public/js/bootstrap.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#upload").change(function() {
+ 		
+ 	 	var path = $("#upload").val();//C:\\fakepath\\xxx";
+ 	 	//alert(path);
+ 		var full_path = path.replace(/C:\\fakepath/, "\\blog\\blog\\public\\img");
+ 		//alert(full_path);
+ 		//alert($("#upload").val());
+	    $("#image").attr("src",full_path);
+		 //document.getElementById("image").src = this.value;
+	});
+		
+});
+
+
+</script>
+<style type="text/css">
+table
+{
+	border:1px solid red;
+}
+td {
+	margin:0px;
+	padding:0px;
+	width:230px;
+	height:70px;
+	border:1px solid black;
+}
+.main {
+	margin:5px;
+}
+input.right {
+	margin-right:0px;
+}
+</style>
 </head>
 <body>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-
 <div class="header">
 	<div class="center">
 	  <ul class="nav nav-tabs navbar-inverse" contenteditable="true">
@@ -42,18 +56,49 @@
 	</div>
 </div>
 <div class="main">
-   <form name="usersubmit" method="post" action="save">
-<div class="input-group subject">
-  <span class="input-group-addon">用户名:</span>
-  <input name="username" type="text" class="form-control" value="<?php echo $username ?>">
-</div>
-<div class="input-group subject">
-  <span class="input-group-addon">&nbsp;&nbsp;&nbsp;密码:</span>
-  <input name="password" type="text" class="form-control" value="<?php echo $password?>">
-</div>
-<div class="btn-group">
-<input type="submit" name="submit" value="保存" class="btn btn-default">
-</div>
+
+<form action="save" method="post">
+<table>
+<tr>
+<td><span>用户名:<input class="right" name="username" type="text"> </span></td>
+<td><span >年龄：<input class="right" name="age" type="text"></span></td> 
+<td rowspan="3"><span style="margin:0px;padding:0px;">
+<input id="image" style="height:100%;width:100%;" name="image" type="image" src="" alt="个人相片"></span>
+</td>
+</tr>
+
+<tr>
+	<td>
+	<span style="padding:0px;margin:0px;">邮箱:<input class="right" name="email" type="text"></span>
+	</td>
+	<td>
+	<span>
+		性别:<input class="right" name="sex" type="radio"  value="0">男
+		<input class="right" name="sex" type="radio" value="1">女
+	</span>
+	</td>
+</tr>
+<tr >
+<td>
+<span>家庭地址：</span><input name="address" type="text">
+</td>
+<td> 
+<span>密码:</span><input name="password" type="password">
+</td>
+
+
+</tr>
+<tr>
+<td colspan="2">
+<input type="submit" name="submit" value="提交"/>
+<input type="reset" value="重置"/>
+</td>
+<td>
+<input type="file" id="upload" name="file" value="上传" />
+</td>
+</tr>
+</table>
+
 </form>
 </div>
 <div class="footer">
