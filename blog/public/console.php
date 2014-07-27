@@ -29,6 +29,7 @@ $app->registerModules(array(
 >>>>>>> 9a7b98aedd25d2481c76116b57d22b6eb2b32484
 	 ),	
  ));
+
 $args = array("module" => "penghui","task" => "Login","action"=> "index");
 $app->handle($args);
 } catch(\Phalcon\CLI\Console\Exception $e) {
