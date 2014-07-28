@@ -9,7 +9,7 @@ class Module //implements \Phalcon\Mvc\ModuleDefinitionInterface
 // 		$loader->registerDirs(array(
 // 				"../apps/pengzhi/controllers/",
 // 				"../apps/pengzhi/models/"))->register();
-		
+		//注册一般使用绝对路径
 		$loader->registerNamespaces(array(
 				'blog\pengzhi\controllers' => '../apps/pengzhi/controllers/',
 				'blog\pengzhi\models' => '../apps/pengzhi/models/',

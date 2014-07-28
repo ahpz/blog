@@ -5,7 +5,7 @@
 *@date 2014-7-26
 *@brief
 */
-namespace blog;
+namespace blog\librarys;
 class Guid{
 	
 	static public  function newGuid(){

@@ -18,6 +18,7 @@ class User extends \Phalcon\Mvc\Model
 	public $email;
 	public $password;
 	public $image;
+	public $address;
 	public $mod_time;
 	public $add_time;
 	public function initialize()
@@ -27,6 +28,11 @@ class User extends \Phalcon\Mvc\Model
 	public function getSource()
 	{
 		return "user";
+	}
+	//判断当前对象是否合法
+	public function isValidated()
+	{
+		return true;
 	}
 	public function objectToArray()
 	{

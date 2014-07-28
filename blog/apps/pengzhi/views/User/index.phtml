@@ -57,13 +57,13 @@ input.right {
 </div>
 <div class="main">
 
-<form action="save" method="post">
+<form action="save" method="post" enctype="multipart/form-data">
 <table>
 <tr>
-<td><span>用户名:<input class="right" name="username" type="text"> </span></td>
+<td><span>用户名:<input class="right" name="username" type="text" value="<?php echo "$username"?>"> </span></td>
 <td><span >年龄：<input class="right" name="age" type="text"></span></td> 
 <td rowspan="3"><span style="margin:0px;padding:0px;">
-<input id="image" style="height:100%;width:100%;" name="image" type="image" src="" alt="个人相片"></span>
+<input id="image" style="height:100%;width:100%;" name="image" type="image" src="<?php echo 'hex2bin($image)';?>" alt="个人相片"></span>
 </td>
 </tr>
 
