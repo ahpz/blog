@@ -13,7 +13,8 @@ class Module //implements \Phalcon\Mvc\ModuleDefinitionInterface
 		$loader->registerNamespaces(array(
 				'blog\pengzhi\controllers' => '../apps/pengzhi/controllers/',
 				'blog\pengzhi\models' => '../apps/pengzhi/models/',
-				'blog\librarys' => "../apps/librarys/"
+				'blog\librarys' => "../apps/librarys/",
+				'blog\pengzhi\plugins' => "../apps/pengzhi/plugins",
 				))->register();
 		
 	}

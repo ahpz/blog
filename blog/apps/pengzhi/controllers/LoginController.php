@@ -1,6 +1,6 @@
 <?php
 namespace blog\pengzhi\controllers;
-class LoginController extends \Phalcon\Mvc\Controller
+class LoginController extends ControllerBase
 {
 	public function indexAction()
 	{
@@ -37,6 +37,21 @@ class LoginController extends \Phalcon\Mvc\Controller
 	public function loginAction()
 	{
 		
+		if ($this->request->isPost() === false) {
+			$this->render("1002", "you do not have permission");
+		} 
 		
+		$name = $this->request->getPost("name");
+		$pass = $this->request->getPost("pass");
+		
+		
+		if ($name && $pass) {
+			if (\blog\pengzhi\plugins\UseOpt::doAuth($name, $pass) === true) {
+				$this->render("1000", "login success");
+			} else {
+				$this->render("1001", "login fail");
+			}
+		}
+		$this->render("1002", "params error");
 	}
 }

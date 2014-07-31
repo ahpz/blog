@@ -6,9 +6,10 @@
 *@brief
 */
 namespace blog\pengzhi\controllers;
+
 class UserController extends \Phalcon\Mvc\Controller
 {
-	
+	const PHOTO_DIR = "/blog/blog/photo/";
 	public function indexAction()
 	{
 	   //session 获取用户名
@@ -35,7 +36,8 @@ class UserController extends \Phalcon\Mvc\Controller
 		
 	}
 	public function saveAction()
- 	{$user = new \blog\pengzhi\models\User();
+ 	{		
+ 	    $user = new \blog\pengzhi\models\User();
  	 
  		try {
  			
@@ -52,7 +54,7 @@ class UserController extends \Phalcon\Mvc\Controller
  				foreach ($this->request->getUploadedFiles() as $file){
  					//echo $file->getName(), " ", $file->getSize()," ",$file->getTempName(),"\n";
  					$fileName = $file->getName();
- 					$file->moveTo($fileName);
+ 					$file->moveTo(PHOTO_DIR.$fileName);
  					$size = $file->getSize();
  					
  					
